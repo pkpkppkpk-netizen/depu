@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>得谱 · 支持</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70;
+    --card: #f5f5f7; --line: #e3e3e6; --accent: #0a6cff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131315; --fg: #f2f2f4; --muted: #9b9ba1;
+      --card: #1e1e21; --line: #303034; --accent: #4c9bff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 20px 72px;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.75 -apple-system, "SF Pro SC", "PingFang SC", "Helvetica Neue", sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding: 64px 0 32px; }
+  h1 { font-size: 34px; line-height: 1.25; margin: 0 0 10px; letter-spacing: -0.4px; }
+  .sub { color: var(--muted); font-size: 17px; margin: 0; }
+  h2 { font-size: 21px; margin: 44px 0 12px; letter-spacing: -0.2px; }
+  h3 { font-size: 16px; margin: 24px 0 6px; }
+  p, li { margin: 0 0 10px; }
+  ul, ol { padding-left: 22px; margin: 0 0 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 22px; margin: 18px 0;
+  }
+  .card :last-child { margin-bottom: 0; }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+  code {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 6px; padding: 1px 6px; font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>得谱</h1>
+  <p class="sub">把演奏、教学视频自动变成可打印的 A4 谱面。</p>
+</header>
+
+<p>本页是「得谱」Mac 版的支持页面。使用中遇到问题、想反馈识别效果，或对隐私政策有疑问，都可以通过页面底部的方式联系我们。</p>
+
+<h2>三步出谱</h2>
+<ol>
+  <li>导入视频（<code>.mov</code> / <code>.mp4</code>）</li>
+  <li>选择保存位置</li>
+  <li>点「开始转换」</li>
+</ol>
+
+<h2>能转哪些视频</h2>
+<p>得谱识别的对象是视频画面里<strong>打印在白纸上的单行乐谱</strong>，拍摄方式和谱种决定了最终效果。</p>
+
+<h3>效果好的情况</h3>
+<ul>
+  <li>视频是固定机位拍摄，或录屏 / 屏幕录制</li>
+  <li>谱面清晰、正对镜头，没有明显倾斜</li>
+  <li>单行五线谱或简谱：架子鼓谱、钢琴单行谱、吉他六线谱、练习曲、讲义谱例</li>
+  <li>白纸黑字，没有大面积花纹或彩色底纹</li>
+</ul>
+
+<h3>效果会打折的情况</h3>
+<ul>
+  <li>手写谱、复印多次已经很虚的谱</li>
+  <li>彩色花底谱、带大面积装饰的排版</li>
+  <li>手持拍摄且抖动、倾斜严重的画面</li>
+  <li>谱面被手指、乐器或弹幕遮挡</li>
+</ul>
+
+<div class="card">
+  <p class="muted">提示：同一行乐谱在画面里停留的时间越久、越稳定，自动截取的结果越干净。如果视频里有大量画面特效或转场，建议先用剪辑软件剪掉。</p>
+</div>
+
+<h2>常见问题</h2>
+
+<h3>转换结果里有重复或多余的小节？</h3>
+<p>多半是原视频中该行停留时间过短，或画面里有滚动、高亮等动态元素。可以尝试降低「变化阈值」，或改用更稳定的录制方式重新录一遍。</p>
+
+<h3>导出的图片很糊？</h3>
+<p>在「清晰度」里选择 <strong>AI 超分</strong>。若设备不支持所带模型，程序会自动回退到常规增强，此时提升幅度有限——根源仍然是原始视频的清晰度。</p>
+
+<h3>四种导出格式有什么区别？</h3>
+<ul>
+  <li><strong>分页 PDF</strong>：A4 一页多行，适合直接打印</li>
+  <li><strong>分页图片</strong>：上面那种，每页导出一张 PNG</li>
+  <li><strong>长图 PDF</strong>：整首谱拼成一张超长图，放进单页 PDF，适合在屏幕上连续看</li>
+  <li><strong>长图图片</strong>：整首谱一张 PNG</li>
+</ul>
+
+<h3>免费次数怎么算？订阅怎么取消？</h3>
+<p>每个 Apple 帐户有 5 次免费转换额度，<strong>只有转换成功才扣一次</strong>。用完后订阅「得谱 专业版」年订阅（38 元/年）即可不限次数使用。订阅会自动续订，可随时在「系统设置 › Apple 帐户 › 订阅」中取消。</p>
+
+<h3>换了电脑，订阅还在吗？</h3>
+<p>在。订阅跟随 Apple 帐户，在「得谱 › 订阅 › 恢复购买」即可找回。</p>
+
+<h2>联系我们</h2>
+<div class="card">
+  <p>邮件：<a href="mailto:pkpkppkpk-netizen@users.noreply.github.com">pkpkppkpk-netizen@users.noreply.github.com</a></p>
+  <p class="muted">请在邮件里附上 macOS 版本、得谱版本，以及问题截图或原视频片段的链接，我们会尽快回复。</p>
+</div>
+
+<footer>
+  <p><a href="privacy.html">隐私政策</a></p>
+  <p>Copyright © 2026 得谱. All rights reserved.</p>
+</footer>
+
+</main>
+</body>
+</html>
